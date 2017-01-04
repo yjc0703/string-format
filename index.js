@@ -20,6 +20,7 @@
   var create = function(transformers) {
     return function(template) {
       var args = Array.prototype.slice.call(arguments, 1);
+      if(Array.isArray(args[0])) { args = args[0]; }
       var idx = 0;
       var state = 'UNDEFINED';
 
